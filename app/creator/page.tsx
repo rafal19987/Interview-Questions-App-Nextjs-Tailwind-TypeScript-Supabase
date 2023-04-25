@@ -6,8 +6,8 @@ import Link from 'next/link'
 import creatorAvatar from '../assets/creator.png'
 import githubBigIcon from '../assets/githubBig.svg'
 import linkedinIcon from '../assets/linkedin.svg'
-import portfolioIcon from '../assets/Portfolio.svg'
-import emailIcon from '../assets/Email.svg'
+import portfolioIcon from '../assets/portfolio.svg'
+import emailIcon from '../assets/email.svg'
 
 const page = () => {
   return (
