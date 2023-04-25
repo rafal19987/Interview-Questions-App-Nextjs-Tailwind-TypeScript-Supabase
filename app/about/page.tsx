@@ -2,20 +2,19 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
+// components
+import TechStackList from './TechStackList'
+
 // assets
 import githubIcon from '../assets/github.svg'
 import figmaIcon from '../assets/figma.svg'
-import tailwindIcon from '../assets/tailwind.svg'
-import reactIcon from '../assets/react.svg'
-import nextIcon from '../assets/next.svg'
-import typescriptIcon from '../assets/tailwind.svg'
 
 const page = () => {
   return (
     <>
       <section>
-        <h1 className="text-3xl text-center">Interview Questions App</h1>
-        <p className="mt-6 text-xl text-center">
+        <h1 className="text-2xl text-center">Interview Questions App</h1>
+        <p className="mt-6 text-m text-center">
           This application was created for people who are preparing for a job
           interview in the field of JavaScript. I wanted access to questions
           from any device, so the application is fully responsive.
@@ -39,21 +38,8 @@ const page = () => {
           </ul>
         </div>
         <div className="flex flex-col w-auto mt-20">
-          <h2 className="text-2xl text-center">Project Tech Stack</h2>
-          <ul className="flex w-full h-full py-6">
-            <li className="px-2">
-              <Image src={tailwindIcon} alt="tailwind icon"></Image>
-            </li>
-            <li className="px-2">
-              <Image src={reactIcon} alt="react icon"></Image>
-            </li>
-            <li className="px-2">
-              <Image src={nextIcon} alt="next icon"></Image>
-            </li>
-            <li className="px-2">
-              <Image src={typescriptIcon} alt="typescript icon"></Image>
-            </li>
-          </ul>
+          <h2 className="text-xl text-center">Project Tech Stack</h2>
+          <TechStackList />
         </div>
       </section>
     </>

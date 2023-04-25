@@ -27,25 +27,25 @@ const page = () => {
           <li className="mt-4">
             <Link className="flex items-center" href="/">
               <Image src={githubBigIcon} alt="github icon"></Image>
-              <span className="ml-2">Check out my Github</span>
+              <span className="ml-2 text-sm">Check out my Github</span>
             </Link>
           </li>
           <li className="mt-4">
             <Link className="flex items-center" href="/">
               <Image src={linkedinIcon} alt="linkedin icon"></Image>
-              <span className="ml-2">Find me on LinkedIn</span>
+              <span className="ml-2 text-sm">Find me on LinkedIn</span>
             </Link>
           </li>
           <li className="mt-4">
             <Link className="flex items-center" href="/">
               <Image src={portfolioIcon} alt="portfolio icon"></Image>
-              <span className="ml-2">Visit my portfolio site</span>
+              <span className="ml-2 text-sm">Visit my portfolio site</span>
             </Link>
           </li>
           <li className="mt-4">
             <Link className="flex items-center" href="/">
               <Image src={emailIcon} alt="email icon"></Image>
-              <span className="ml-2">Contact via Email</span>
+              <span className="ml-2 text-sm">Contact via Email</span>
             </Link>
           </li>
         </ul>

@@ -1,8 +1,8 @@
 // lib
 import Image from 'next/image'
 
-// components
-import Arrow from '../assets/arrow.svg'
+// assets
+import arrow from '../assets/arrow.svg'
 
 const Main = () => {
   return (
@@ -14,7 +14,7 @@ const Main = () => {
         For start your learning process please click button bellow{' '}
       </p>
       <button className="flex justify-center items-center w-[75px] h-[75px] mt-5 bg-[#8ECAE6] rounded-full">
-        <Image src={Arrow} alt="Arrow"></Image>
+        <Image src={arrow} alt="Arrow"></Image>
       </button>
     </main>
   )
