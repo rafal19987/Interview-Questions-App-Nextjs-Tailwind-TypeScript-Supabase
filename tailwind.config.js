@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -10,6 +11,10 @@ module.exports = {
       fontFamily: {
         body: ['Milonga', 'cursive'],
       },
+    },
+    screens: {
+      xs: { max: '280px' },
+      ...defaultTheme.screens,
     },
   },
   plugins: [],

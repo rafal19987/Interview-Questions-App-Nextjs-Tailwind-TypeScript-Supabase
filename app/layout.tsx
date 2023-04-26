@@ -24,7 +24,7 @@ export default function RootLayout({
         <div className="relative overflow-hidden">
           <div className="flex flex-col justify-between items-center min-h-screen max-h-full ">
             <Header />
-            <main className="flex grow flex-col items-center h-4/5 w-4/5 mt-[36px] p-2 verflow-hidden">
+            <main className="flex grow flex-col items-center h-full w-full mx-6 verflow-hidden">
               {children}
             </main>
             <Footer />
