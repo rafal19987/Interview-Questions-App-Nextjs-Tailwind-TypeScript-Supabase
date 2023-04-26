@@ -1,13 +1,6 @@
-// libs
-import Link from 'next/link'
-import Image from 'next/image'
-
 // components
 import TechStackList from './TechStackList'
-
-// assets
-import githubIcon from '../assets/github.svg'
-import figmaIcon from '../assets/figma.svg'
+import LinkList from './LinkList'
 
 const page = () => {
   return (
@@ -22,20 +15,7 @@ const page = () => {
       </section>
       <section className="flex flex-col mt-10">
         <div>
-          <ul>
-            <li className="flex justify-center">
-              <Link href="/" className="flex">
-                <Image src={githubIcon} alt="github icon"></Image>
-                <span className="pl-3">Repository of Project</span>
-              </Link>
-            </li>
-            <li className="flex justify-center mt-4">
-              <Link href="/" className="flex">
-                <Image src={figmaIcon} alt="figma icon"></Image>
-                <span className="pl-3">Prototype Figma Project</span>
-              </Link>
-            </li>
-          </ul>
+          <LinkList />
         </div>
         <div className="flex flex-col w-auto mt-20">
           <h2 className="text-xl text-center">Project Tech Stack</h2>

@@ -10,9 +10,6 @@ module.exports = {
       fontFamily: {
         body: ['Milonga', 'cursive'],
       },
-      rotate: {
-        50: '-50deg',
-      },
     },
   },
   plugins: [],
