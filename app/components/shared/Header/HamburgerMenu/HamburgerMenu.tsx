@@ -14,18 +14,18 @@ const HamburgerMenu = () => {
   return (
     <>
       <button
-        className="relative flex flex-col justify-evenly items-center w-12 h-12 mr-6 rounded-md bg-slate-800 md:hidden"
+        className="relative flex flex-col justify-evenly items-center w-16 h-12 mr-6 rounded-lg bg-[#4F4E8D] md:hidden"
         onClick={toggleMenu}
       >
         {isOpen ? (
           <>
-            <div className="translate-y-2 rotate-45 w-4/5 h-1 bg-slate-500 rounded-sm transition-all duration-300"></div>
-            <div className="-translate-y-2 -rotate-45 w-4/5 h-1 bg-slate-500 rounded-sm transition-all duration-300"></div>
+            <div className="translate-y-2 rotate-45 w-4/5 h-1 bg-white rounded-sm transition-all duration-300"></div>
+            <div className="-translate-y-2 -rotate-45 w-4/5 h-1 bg-white rounded-sm transition-all duration-300"></div>
           </>
         ) : (
           <>
-            <div className="w-4/5 h-1 bg-slate-500 rounded-sm transition-transform duration-300"></div>
-            <div className="w-4/5 h-1 bg-slate-500 rounded-sm transition-transform duration-300"></div>
+            <div className="w-4/5 h-1 bg-white rounded-sm transition-transform duration-300"></div>
+            <div className="w-4/5 h-1 bg-white rounded-sm transition-transform duration-300"></div>
           </>
         )}
       </button>
