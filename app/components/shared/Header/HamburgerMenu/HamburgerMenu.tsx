@@ -30,8 +30,8 @@ const HamburgerMenu = () => {
         )}
       </button>
       {isOpen ? (
-        // nav height is [100vh - (headerHeight) -  (footerHeight)]
-        <nav className="absolute flex justify-center items-center top-24 right-0 w-screen h-[calc(100vh-6rem-2rem)] bg-slate-100 text-3xl z-10 duration-300">
+        // nav height is [100vh - (headerHeight)]
+        <nav className="absolute flex justify-center items-center top-24 right-0 w-screen h-[calc(100vh-6rem)] bg-slate-100 text-3xl z-10 duration-300">
           <ul className="flex flex-col justify-evenly items-center border-2 w-full h-full">
             <li className="">
               <Link href="/" onClick={toggleMenu}>
@@ -51,8 +51,8 @@ const HamburgerMenu = () => {
           </ul>
         </nav>
       ) : (
-        // nav height is [100vh - (headerHeight) -  (footerHeight)]
-        <nav className="absolute flex justify-center items-center top-24 right-0 w-screen h-[calc(100vh-6rem-2rem)] bg-slate-100 text-3xl z-10 translate-x-full duration-300 ">
+        // nav height is [100vh - (headerHeight)]
+        <nav className="absolute flex justify-center items-center top-24 right-0 w-screen h-[calc(100vh-6rem)] bg-slate-100 text-3xl z-10 translate-x-full duration-300 ">
           <ul className="flex flex-col justify-evenly items-center border-2 w-full h-full">
             <li>
               <Link href="/">Home</Link>
