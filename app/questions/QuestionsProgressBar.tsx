@@ -4,7 +4,7 @@ const QuestionsProgressBar = (props: any) => {
       style={{
         width: `${props.filled}%`,
       }}
-      className={` h-2 rounded-lg bg-cyan-500 `}
+      className="h-2 rounded-lg bg-[#23216D]"
     ></div>
   )
 }

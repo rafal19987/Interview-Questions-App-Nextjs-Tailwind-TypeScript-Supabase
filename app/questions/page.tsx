@@ -140,7 +140,7 @@ const Page = () => {
     <>
       <div className="flex flex-col justify-center items-center w-full h-full p-6">
         <section className="w-full h-40">
-          <p className=" text-zinc-600 h-5">
+          <p className=" text-black h-5">
             {index + 1 == baseOfQuestions.length ? (
               <span>Last Question</span>
             ) : (
@@ -149,18 +149,18 @@ const Page = () => {
               </span>
             )}
           </p>
-          <div className="relative flex flex-col items-center  rounded-lg border-2 border-violet-700 h-[calc(100%-1.25rem)] w-full">
-            <h1 className="p-4 text-2xl text-center">
+          <div className="relative flex flex-col items-center  rounded-lg border-2 border-[#23216D] h-[calc(100%-1.25rem)] w-full">
+            <h1 className="p-4 text-2xl text-center text-black">
               {baseOfQuestions[index].question}
             </h1>
-            <div className="absolute flex justify-start items-center bottom-1 w-11/12 h-3 m-1 p-1 rounded-lg bg-cyan-800">
+            <div className="absolute flex justify-start items-center bottom-1 w-11/12 h-3 m-1 p-1 rounded-lg bg-[#4F4E8D]">
               <QuestionsProgressBar filled={filled} />
             </div>
           </div>
         </section>
-        <section className="mt-5 h-72">
+        <section className="mt-5 h-96 bg-[#23216D] rounded-lg">
           {!isRunning && (
-            <h2 className="p-6 text-md text-center">
+            <h2 className="p-6 text-xl text-center text-white">
               {baseOfQuestions[index].answare}
             </h2>
           )}
@@ -168,14 +168,14 @@ const Page = () => {
 
         {!isRunning ? (
           <button
-            className="mt-12 border-2 border-violet-500 w-40 h-12 rounded-lg  text-violet-500"
+            className="mt-12 w-56 h-16 rounded-lg bg-[#23216D] text-white"
             onClick={nextQuestion}
           >
             Next Question
           </button>
         ) : (
           <button
-            className="mt-12 border-2 border-violet-500 w-40 h-12 rounded-lg  text-violet-500"
+            className="mt-12  w-56 h-16 rounded-lg bg-[#23216D] text-white"
             onClick={() => {
               setIsRunning(false)
               setFilled(100)
