@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`w-screen h-screen  text-zinc-500 bg-zinc-800 ${montserrat.className}`}
+        className={`w-screen h-screen  text-zinc-500 bg-white ${montserrat.className}`}
       >
         <div className="relative overflow-hidden">
           <div className="flex flex-col justify-between items-center min-h-screen max-h-full ">
