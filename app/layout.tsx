@@ -1,9 +1,17 @@
+//lib
+import { Montserrat } from 'next/font/google'
+
 //components
 import Header from './components/shared/Header/Header'
 import Footer from './components/shared/Footer/Footer'
 
 // styles
 import './globals.css'
+
+const montserrat = Montserrat({
+  weight: '400',
+  subsets: ['latin'],
+})
 
 export const metadata = {
   title: 'Interview Questions App',
@@ -20,7 +28,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="w-screen h-screen font-body text-zinc-500 bg-zinc-800">
+      <body
+        className={`w-screen h-screen  text-zinc-500 bg-zinc-800 ${montserrat.className}`}
+      >
         <div className="relative overflow-hidden">
           <div className="flex flex-col justify-between items-center min-h-screen max-h-full ">
             <Header />
