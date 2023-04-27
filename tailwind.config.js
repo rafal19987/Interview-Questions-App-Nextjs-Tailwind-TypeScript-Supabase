@@ -7,11 +7,7 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        body: ['Milonga', 'cursive'],
-      },
-    },
+    extend: {},
     screens: {
       xs: { max: '280px' },
       ...defaultTheme.screens,
