@@ -10,7 +10,7 @@ const HamburgerMenu = () => {
   const toggleMenu = () => {
     isOpen ? setIsOpen(false) : setIsOpen(true)
   }
-  console.log(isOpen)
+
   return (
     <>
       <button
