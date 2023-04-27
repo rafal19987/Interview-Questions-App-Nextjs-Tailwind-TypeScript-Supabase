@@ -9,7 +9,7 @@ export const metadata = {
   title: 'Interview Questions App',
   description: 'JavaScript Interview Questions App',
   icons: {
-    icon: '/pageFav.svg',
+    icon: '/pageFavicon.svg',
   },
 }
 
