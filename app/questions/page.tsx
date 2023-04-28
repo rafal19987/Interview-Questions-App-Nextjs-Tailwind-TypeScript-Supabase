@@ -153,9 +153,8 @@ const Page = () => {
             <h1 className="p-4 text-2xl text-center text-black">
               {baseOfQuestions[index].question}
             </h1>
-            <div className="absolute flex justify-start items-center bottom-1 w-11/12 h-3 m-1 p-1 rounded-lg bg-[#4F4E8D]">
-              <QuestionsProgressBar filled={filled} />
-            </div>
+
+            <QuestionsProgressBar filled={filled} />
           </div>
         </section>
         <section className="mt-5 h-96 bg-[#23216D] rounded-lg">

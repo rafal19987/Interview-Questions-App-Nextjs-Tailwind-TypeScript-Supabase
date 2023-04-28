@@ -14,25 +14,30 @@ const HamburgerMenu = () => {
   return (
     <>
       <button
-        className="relative flex flex-col justify-evenly items-center w-16 h-12 mr-6 rounded-lg bg-[#4F4E8D] md:hidden"
+        className="relative flex flex-col justify-evenly items-center w-16 h-8 mr-6  md:hidden"
         onClick={toggleMenu}
       >
         {isOpen ? (
+          // menu is open
           <>
-            <div className="translate-y-2 rotate-45 w-4/5 h-1 bg-white rounded-sm transition-all duration-300"></div>
-            <div className="-translate-y-2 -rotate-45 w-4/5 h-1 bg-white rounded-sm transition-all duration-300"></div>
+            <div className="translate-y-2 rotate-45 w-3/5 h-1 bg-white rounded-sm transition-all duration-300"></div>
+            <div className="w-3/5 h-1 bg-white rounded-sm transition-all opacity-0 duration-100"></div>
+            <div className="-translate-y-2 -rotate-45 w-3/5 h-1 bg-white rounded-sm transition-all duration-300"></div>
           </>
         ) : (
+          // menu is closed
           <>
-            <div className="w-4/5 h-1 bg-white rounded-sm transition-transform duration-300"></div>
-            <div className="w-4/5 h-1 bg-white rounded-sm transition-transform duration-300"></div>
+            <div className="w-3/5 h-1 bg-white rounded-sm transition-transform duration-300"></div>
+            <div className="w-3/5 h-1 bg-white rounded-sm transition-all opacity-1 duration-100"></div>
+            <div className="w-3/5 h-1 bg-white rounded-sm transition-transform duration-300"></div>
           </>
         )}
       </button>
       {isOpen ? (
+        // nav is open
         // nav height is [100vh - (headerHeight)]
-        <nav className="absolute flex justify-center items-center top-24 right-0 w-screen h-[calc(100vh-6rem)] bg-slate-100 text-3xl z-10 duration-300">
-          <ul className="flex flex-col justify-evenly items-center border-2 w-full h-full">
+        <nav className="absolute flex justify-center  top-16 right-auto w-screen h-[calc(100vh-4rem)] bg-[#6200ee] text-3xl text-white z-10 duration-300">
+          <ul className="flex flex-col justify-evenly items-center  w-full h-full">
             <li className="">
               <Link href="/" onClick={toggleMenu}>
                 Home
@@ -51,9 +56,10 @@ const HamburgerMenu = () => {
           </ul>
         </nav>
       ) : (
+        // nav is closed
         // nav height is [100vh - (headerHeight)]
-        <nav className="absolute flex justify-center items-center top-24 right-0 w-screen h-[calc(100vh-6rem)] bg-slate-100 text-3xl z-10 translate-x-full duration-300 ">
-          <ul className="flex flex-col justify-evenly items-center border-2 w-full h-full">
+        <nav className="absolute flex justify-center  top-16 right-0 w-screen h-[calc(100vh-4rem)] bg-[#6200ee] text-3xl text-white z-10 translate-x-full duration-300 ">
+          <ul className="flex flex-col justify-evenly items-center  w-full h-full">
             <li>
               <Link href="/">Home</Link>
             </li>

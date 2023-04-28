@@ -4,7 +4,7 @@ import HamburgerMenu from './HamburgerMenu/HamburgerMenu'
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center w-screen h-24 bg-black overflow-hidden">
+    <header className="flex justify-between items-center w-screen h-16 bg-[#6200ee] overflow-hidden">
       <Logo />
       <HamburgerMenu />
     </header>
