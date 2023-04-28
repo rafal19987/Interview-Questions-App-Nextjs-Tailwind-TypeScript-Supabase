@@ -4,7 +4,10 @@
 import { useEffect, useState } from 'react'
 
 // componenets
-import QuestionsProgressBar from './QuestionsProgressBar'
+import Button from '../components/Button'
+import QuestionSection from './QuestionSection'
+import Answer from './Answer'
+import Done from './Done'
 
 const baseOfQuestions = [
   {
@@ -111,10 +114,23 @@ const baseOfQuestions = [
   },
 ]
 
+const questionsBaseLength = baseOfQuestions.length
+
 const Page = () => {
   const [filled, setFilled] = useState(1)
   const [isRunning, setIsRunning] = useState(true)
   const [index, setIndex] = useState(0)
+
+  // Below is to change. Not nessesery to use useState for establish is it last question
+  const [isLastQuestion, setIsLastQuestion] = useState(false)
+
+  const question = baseOfQuestions[index].question
+  const answer = baseOfQuestions[index].answare
+
+  const showAnswer = () => {
+    setIsRunning(false)
+    setFilled(100)
+  }
 
   const nextQuestion = () => {
     if (index < baseOfQuestions.length - 1) {
@@ -122,7 +138,7 @@ const Page = () => {
       setIsRunning(true)
       setFilled(1)
     } else {
-      console.log('Chuj w dupę policji')
+      setIsLastQuestion(true)
       setIsRunning(false)
       setFilled(100)
     }
@@ -138,52 +154,37 @@ const Page = () => {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center w-full h-full p-6">
-        <section className="w-full h-40">
-          <p className=" text-black h-5">
-            {index + 1 == baseOfQuestions.length ? (
-              <span>Last Question</span>
-            ) : (
-              <span>
-                Question {index + 1} of {baseOfQuestions.length}
-              </span>
-            )}
-          </p>
-          <div className="relative flex flex-col items-center  rounded-lg border-2 border-[#23216D] h-[calc(100%-1.25rem)] w-full">
-            <h1 className="p-4 text-2xl text-center text-black">
-              {baseOfQuestions[index].question}
-            </h1>
+      {isLastQuestion ? (
+        <>
+          <Done />
+        </>
+      ) : (
+        <>
+          <QuestionSection
+            index={index}
+            isLastQuestion={isLastQuestion}
+            questionsBaseLength={questionsBaseLength}
+            filled={filled}
+            question={question}
+          />
 
-            <QuestionsProgressBar filled={filled} />
-          </div>
-        </section>
-        <section className="mt-5 h-96 bg-[#23216D] rounded-lg">
-          {!isRunning && (
-            <h2 className="p-6 text-xl text-center text-white">
-              {baseOfQuestions[index].answare}
-            </h2>
+          {!isRunning ? (
+            /* show answer and 'next question' button */
+            <>
+              <section className="mt-5  h-96 bg-[#23216D] rounded-lg opacity-1 transition-all duration-300">
+                <Answer answer={answer} />
+              </section>
+              <Button onClick={nextQuestion} text={'next question'} />
+            </>
+          ) : (
+            /* hide answer and show 'show answer' button */
+            <>
+              <section className="mt-5 translate-x-96 h-96 rounded-lg opacity-0"></section>
+              <Button onClick={showAnswer} text={'show answer'} />
+            </>
           )}
-        </section>
-
-        {!isRunning ? (
-          <button
-            className="mt-12 w-56 h-16 rounded-lg bg-[#23216D] text-white"
-            onClick={nextQuestion}
-          >
-            Next Question
-          </button>
-        ) : (
-          <button
-            className="mt-12  w-56 h-16 rounded-lg bg-[#23216D] text-white"
-            onClick={() => {
-              setIsRunning(false)
-              setFilled(100)
-            }}
-          >
-            Show Question
-          </button>
-        )}
-      </div>
+        </>
+      )}
     </>
   )
 }
