@@ -132,6 +132,6 @@ const questions: QuestionsProps[] = [
   },
 ]
 
-export async function GET(): Promise<T> {
+export async function GET() {
   return NextResponse.json(questions)
 }

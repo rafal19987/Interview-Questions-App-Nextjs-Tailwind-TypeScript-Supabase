@@ -50,7 +50,7 @@ const Page = () => {
       setQuestions(data)
     }
     getQuestions()
-  })
+  }, [])
 
   useEffect(() => {
     if (filled <= 100 && isRunning) {
