@@ -4,6 +4,8 @@
 import { useState } from 'react'
 import Link from 'next/link'
 
+import DesktopNav from '../DesktopNav/DesktopNav'
+
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
@@ -72,6 +74,7 @@ const HamburgerMenu = () => {
           </ul>
         </nav>
       )}
+      <DesktopNav />
     </>
   )
 }
