@@ -12,14 +12,13 @@
 
 # Getting Started
 
-First, clone the repo on your computer:
+First, clone the repo on your computer
 
 ```bash
 git clone https://github.com/rafal19987/Interview-Questions-App
-npm i
 ```
 
-Go into cloned folder
+Go into folder
 
 ```bash
 cd Interview-Questions-App
