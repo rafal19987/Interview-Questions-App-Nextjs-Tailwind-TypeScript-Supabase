@@ -3,10 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 // assets
-import creatorAvatar from '../assets/creator.png'
+import creatorAvatar from '../assets/avatar.png'
 import githubBigIcon from '../assets/githubBig.svg'
 import linkedinIcon from '../assets/linkedin.svg'
-import portfolioIcon from '../assets/portfolio.svg'
 import emailIcon from '../assets/email.svg'
 
 const page = () => {
@@ -16,6 +15,7 @@ const page = () => {
         <section className="flex flex-col justify-center items-center ">
           <div className="flex items-center justify-center w-[115px] h-[115px] p-1 rounded-full bg-gradient-to-b from-[#8ECAE6]/20 to-[#8ECAE6]/0 bg-opacity-25">
             <Image
+              className=" rounded-full"
               src={creatorAvatar}
               width={100}
               height={100}
@@ -31,7 +31,10 @@ const page = () => {
         <section className="mt-6 w-full h-full">
           <ul className="flex flex-col items-center justify-between h-40 w-full">
             <li>
-              <Link className="flex items-center" href="/">
+              <Link
+                className="flex items-center"
+                href="https://github.com/rafal19987"
+              >
                 <Image
                   src={githubBigIcon}
                   width={20}
@@ -42,7 +45,10 @@ const page = () => {
               </Link>
             </li>
             <li>
-              <Link className="flex items-center" href="/">
+              <Link
+                className="flex items-center"
+                href="https://www.linkedin.com/in/rafa%C5%82-izdebski-78023b1b0/"
+              >
                 <Image
                   src={linkedinIcon}
                   width={20}
@@ -52,27 +58,16 @@ const page = () => {
                 <span className="ml-2 text-sm">Find me on LinkedIn</span>
               </Link>
             </li>
-            <li>
-              <Link className="flex items-center" href="/">
-                <Image
-                  src={portfolioIcon}
-                  width={20}
-                  height={20}
-                  alt="portfolio icon"
-                ></Image>
-                <span className="ml-2 text-sm">Visit my portfolio site</span>
-              </Link>
-            </li>
-            <li>
-              <Link className="flex items-center" href="/">
-                <Image
-                  src={emailIcon}
-                  width={20}
-                  height={20}
-                  alt="email icon"
-                ></Image>
-                <span className="ml-2 text-sm">Contact via Email</span>
-              </Link>
+            <li className="flex items-center">
+              <Image
+                src={emailIcon}
+                width={20}
+                height={20}
+                alt="email icon"
+              ></Image>
+              <span className="ml-2 text-sm">
+                Contact via Email: rizdebski29@gmail.com
+              </span>
             </li>
           </ul>
         </section>
