@@ -1,6 +1,7 @@
 // components
 // import Logo from './Logo/Logo'
 import HamburgerMenu from './HamburgerMenu/HamburgerMenu'
+import DesktopNav from './DesktopNav/DesktopNav'
 
 const Header = () => {
   return (
@@ -8,6 +9,7 @@ const Header = () => {
       {/* <Logo /> */}
       <div className="opacity-0">JavaScript Interview Questions</div>
       <HamburgerMenu />
+      <DesktopNav />
     </header>
   )
 }
