@@ -80,7 +80,7 @@ const Page = () => {
             {!isRunning ? (
               /* show answer and 'next question' button */
               <>
-                <section className="mt-5  h-96 bg-[#23216D] rounded-lg opacity-1 transition-all duration-300">
+                <section className="mt-5  h-96 bg-zinc-500 rounded-lg opacity-1 transition-all duration-300">
                   <Answer answer={questions[index].answer} />
                 </section>
                 <Button onClick={nextQuestion} text={'next question'} />
