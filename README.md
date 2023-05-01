@@ -1,8 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Live version of project
+
+- https://interview-questions-app.vercel.app/
+
+## About APP
+
+# JavaScript Interview Questions APP is my first application created using TypeScript, Tailwind, React, Next.js. The main idea of the application is to help you prepare for javascript interviews. The database of questions will be constantly expanded.
+
+# The application is currently in the implementation phase and not all functionalities have been implemented. Among other things, it lacks support for all resolutions, so it's worth checking it out in the mobile view. You can check the original stylistic idea of the application through the shared prototype in Figma, which was prepared by me.
+
+- https://www.figma.com/proto/8QvtrBsjZqSzMUszJSo9qD/Interview-Questions?node-id=0-1
 
 ## Getting Started
 
-First, run the development server:
+First, clone the repo on your computer:
+
+```bash
+git clone https://github.com/rafal19987/Interview-Questions-App
+```
+
+Then, you can run the development server:
 
 ```bash
 npm run dev
@@ -13,24 +29,3 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.ts`.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
