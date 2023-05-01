@@ -29,12 +29,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`w-screen h-screen  text-zinc-500 bg-white ${montserrat.className}`}
+        className={`flex justify-center items-center lg:w-screen lg:h-screen  text-zinc-500 xl:bg-[#e9eaed] ${montserrat.className}`}
       >
-        <div className="relative overflow-hidden">
-          <div className="flex flex-col justify-between items-center min-h-screen max-h-full ">
+        <div className="relative overflow-hidden lg:w-screen lg:h-screen lg:flex lg:justify-center lg:items-center xl:w-[1200px]">
+          <div className="flex flex-col justify-between items-center min-h-screen max-h-full w-full">
             <Header />
-            <main className="flex grow flex-col items-center h-full w-full mx-6 verflow-hidden">
+            <main className="flex grow flex-col items-center h-full w-full mx-6 bg-white verflow-hidden">
               {children}
             </main>
             <Footer />

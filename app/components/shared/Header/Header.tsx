@@ -5,7 +5,7 @@ import DesktopNav from './DesktopNav/DesktopNav'
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center w-screen h-16 bg-[#6200ee] overflow-hidden">
+    <header className="flex justify-between items-center w-full h-16 bg-[#6200ee] overflow-hidden">
       {/* <Logo /> */}
       <div className="opacity-0">JavaScript Interview Questions</div>
       <HamburgerMenu />

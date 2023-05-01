@@ -61,7 +61,7 @@ const Page = () => {
   }, [filled, isRunning])
 
   return (
-    <>
+    <div className="lg:flex lg:flex-col lg:items-center lg:h-full lg:w-[400px]">
       {questions.length ? (
         isLastQuestion ? (
           <>
@@ -97,7 +97,7 @@ const Page = () => {
       ) : (
         <>Loading..</>
       )}
-    </>
+    </div>
   )
 }
 
