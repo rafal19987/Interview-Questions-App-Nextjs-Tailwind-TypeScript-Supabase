@@ -25,7 +25,7 @@ const socials: SocialProps = [
   {
     icon: linkedinIcon,
     alt: 'linkedin icon',
-    description: 'Finde me on LinkedIn',
+    description: 'Find me on LinkedIn',
     reference: 'https://www.linkedin.com/in/rafa%C5%82-izdebski-78023b1b0/',
     isEmail: false,
   },
@@ -47,7 +47,7 @@ const socials: SocialProps = [
 
 const SocialList = () => {
   return (
-    <ul className="flex flex-col items-center justify-between h-40 w-full md:flex-row md:items-stretch">
+    <ul className="flex flex-col items-center justify-between h-56 md:h-full w-full md:flex-row lg:max-w-screen-md">
       {socials.map((item) => (
         <SocialListItem
           key={item.description}
