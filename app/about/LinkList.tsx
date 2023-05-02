@@ -14,9 +14,7 @@ interface LinkProps {
   reference: string
 }
 
-interface LinkProps extends Array<LinkProps> {}
-
-const links: LinkProps = [
+const links: LinkProps[] = [
   {
     icon: githubIcon,
     alt: 'github icon',
