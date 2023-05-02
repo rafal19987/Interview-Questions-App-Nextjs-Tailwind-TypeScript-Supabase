@@ -8,7 +8,7 @@ import typescriptIcon from '../assets/typescript.svg'
 
 const TechStackList = () => {
   return (
-    <ul className="flex w-full flex-wrap justify-center items-center h-full py-6">
+    <ul className="flex w-full flex-wrap justify-center items-center h-full p-4">
       <li className="px-2 mt-2">
         <Image src={tailwindIcon} alt="tailwind icon"></Image>
       </li>
