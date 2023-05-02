@@ -4,7 +4,7 @@ import SocialList from './SocialList'
 const page = () => {
   return (
     <>
-      <div className="flex flex-col p-6 w-screen h-full bg-[#e9eaed] md:w-4/5 md:h-auto">
+      <div className="flexflex-col p-6 w-screen h-full bg-[#e9eaed] md:w-4/5 md:h-auto">
         <section className="flex flex-col justify-center items-center">
           <CreatorAvatar />
           <h2 className="text-lg text-center mt-1 md:mt-3 md:text-2xl">
