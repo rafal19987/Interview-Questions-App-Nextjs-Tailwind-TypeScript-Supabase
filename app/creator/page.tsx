@@ -10,7 +10,7 @@ const page = () => {
           <h2 className="text-lg text-center mt-1 md:mt-3 md:text-2xl">
             Hi I`m Rafał
           </h2>
-          <p className="text-lg text-center mt-2 md:mt-3 md:text-2xl lg:max-w-screen-md">
+          <p className="text-lg text-center mt-2 md:mt-3 md:text-2xl lg:max-w-screen-sm">
             I`m ambitious frontend developer who are looking for opportunites to
             gain first expercience working in a real exited project
           </p>

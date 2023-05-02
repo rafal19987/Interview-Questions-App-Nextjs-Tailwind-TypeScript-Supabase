@@ -47,7 +47,7 @@ const socials: SocialProps = [
 
 const SocialList = () => {
   return (
-    <ul className="flex flex-col items-center justify-between h-56 md:h-full w-full md:flex-row lg:max-w-screen-md">
+    <ul className="flex flex-col items-center justify-between h-56 md:h-full w-full md:flex-row lg:max-w-screen-sm">
       {socials.map((item) => (
         <SocialListItem
           key={item.description}
