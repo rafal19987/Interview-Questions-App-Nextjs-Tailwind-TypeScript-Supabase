@@ -61,7 +61,7 @@ const Page = () => {
   }, [filled, isRunning])
 
   return (
-    <div className="flex flex-col items-center md:w-[400px]">
+    <div className="flex flex-col items-center w-full md:w-[400px]">
       {questions.length ? (
         isLastQuestion ? (
           <>
