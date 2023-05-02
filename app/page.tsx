@@ -11,7 +11,7 @@ export default function Home() {
         <h2 className="w-4/5 pt-6 text-2xl text-center font-semibold md:text-3xl">
           Learn JavaScript Interview Questions
         </h2>
-        <p className="w-3/5 mt-6 text-lg text-center lg:text-lg">
+        <p className="w-full p-6 lg:w-3/5 mt-6 text-lg text-center lg:text-lg">
           Job interviews can be very stressful. That is why it is so important
           to prepare well for them. This app was created to help you learn. The
           questions and answers you will see here may be useful in job
