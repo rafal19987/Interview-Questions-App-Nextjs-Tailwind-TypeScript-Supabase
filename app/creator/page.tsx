@@ -1,75 +1,23 @@
-// lib
-import Image from 'next/image'
-import Link from 'next/link'
-
-// assets
-import creatorAvatar from '../assets/avatar.png'
-import githubBigIcon from '../assets/githubBig.svg'
-import linkedinIcon from '../assets/linkedin.svg'
-import emailIcon from '../assets/email.svg'
+import CreatorAvatar from './CreatorAvatar'
+import SocialList from './SocialList'
 
 const page = () => {
   return (
     <>
-      <div className="flex flex-col p-6 w-screen h-full">
-        <section className="flex flex-col justify-center items-center ">
-          <div className="flex items-center justify-center w-[115px] h-[115px] p-1 rounded-full bg-gradient-to-b from-[#8ECAE6]/20 to-[#8ECAE6]/0 bg-opacity-25">
-            <Image
-              className=" rounded-full"
-              src={creatorAvatar}
-              width={100}
-              height={100}
-              alt="avatar"
-            ></Image>
-          </div>
-          <h2 className="text-lg text-center mt-1">Hi I`m Rafał</h2>
-          <p className="text-base text-center mt-2">
+      <div className="flex grow flex-col items-center p-6 w-screen h-full bg-white ">
+        <section className="flex flex-col justify-center items-center  md:w-4/5">
+          <CreatorAvatar />
+          <h2 className="text-lg text-center mt-1 md:mt-3 md:text-2xl">
+            Hi I`m Rafał
+          </h2>
+          <p className="text-lg text-center mt-2 md:mt-3 md:text-2xl lg:max-w-screen-sm">
+
             I`m ambitious frontend developer who are looking for opportunites to
             gain first expercience working in a real exited project
           </p>
         </section>
-        <section className="mt-6 w-full h-full">
-          <ul className="flex flex-col items-center justify-between h-40 w-full">
-            <li>
-              <Link
-                className="flex items-center"
-                href="https://github.com/rafal19987"
-              >
-                <Image
-                  src={githubBigIcon}
-                  width={20}
-                  height={20}
-                  alt="github icon"
-                ></Image>
-                <span className="ml-2 text-sm">Check out my Github</span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="flex items-center"
-                href="https://www.linkedin.com/in/rafa%C5%82-izdebski-78023b1b0/"
-              >
-                <Image
-                  src={linkedinIcon}
-                  width={20}
-                  height={20}
-                  alt="linkedin icon"
-                ></Image>
-                <span className="ml-2 text-sm">Find me on LinkedIn</span>
-              </Link>
-            </li>
-            <li className="flex items-center">
-              <Image
-                src={emailIcon}
-                width={20}
-                height={20}
-                alt="email icon"
-              ></Image>
-              <span className="ml-2 text-sm">
-                Contact via Email: rizdebski29@gmail.com
-              </span>
-            </li>
-          </ul>
+        <section className="flex items-center flex-col w-4/5 mt-8">
+          <SocialList />
         </section>
       </div>
     </>

@@ -61,7 +61,7 @@ const Page = () => {
   }, [filled, isRunning])
 
   return (
-    <>
+    <div className="flex flex-col items-center w-full md:w-[400px]">
       {questions.length ? (
         isLastQuestion ? (
           <>
@@ -80,16 +80,20 @@ const Page = () => {
             {!isRunning ? (
               /* show answer and 'next question' button */
               <>
-                <section className="mt-5  h-96 bg-[#23216D] rounded-lg opacity-1 transition-all duration-300">
+                <section className="mt-5  h-96 bg-[#FF7900]/20 rounded-lg opacity-1 transition-all duration-300">
                   <Answer answer={questions[index].answer} />
                 </section>
-                <Button onClick={nextQuestion} text={'next question'} />
+                <div className="mt-12">
+                  <Button onClick={nextQuestion} text={'next question'} />
+                </div>
               </>
             ) : (
               /* hide answer and show 'show answer' button */
               <>
                 <section className="mt-5 translate-x-96 h-96 rounded-lg opacity-0"></section>
-                <Button onClick={showAnswer} text={'show answer'} />
+                <div className="mt-12">
+                  <Button onClick={showAnswer} text={'show answer'} />
+                </div>
               </>
             )}
           </>
@@ -97,7 +101,7 @@ const Page = () => {
       ) : (
         <>Loading..</>
       )}
-    </>
+    </div>
   )
 }
 
