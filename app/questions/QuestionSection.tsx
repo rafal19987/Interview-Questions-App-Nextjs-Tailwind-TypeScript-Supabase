@@ -27,7 +27,7 @@ const QuestionSection = ({
           </span>
         )}
       </p>
-      <div className="relative flex flex-col items-center  rounded-lg border-2 border-[#23216D] h-[calc(100%-1.25rem)] w-full">
+      <div className="relative flex flex-col items-center rounded-lg mt-2 border-2 border-[#FF7900]/50 h-[calc(100%-1.25rem)] w-full">
         <h1 className="p-4 text-2xl text-center text-black">{question}</h1>
         <QuestionsProgressBar filled={filled} />
       </div>
