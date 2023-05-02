@@ -4,8 +4,8 @@ import SocialList from './SocialList'
 const page = () => {
   return (
     <>
-      <div className="flexflex-col p-6 w-screen h-full bg-[#e9eaed] md:w-4/5 md:h-auto">
-        <section className="flex flex-col justify-center items-center">
+      <div className="flex grow flex-col items-center p-6 w-screen h-full bg-white ">
+        <section className="flex flex-col justify-center items-center  md:w-4/5">
           <CreatorAvatar />
           <h2 className="text-lg text-center mt-1 md:mt-3 md:text-2xl">
             Hi I`m Rafał
@@ -15,7 +15,7 @@ const page = () => {
             gain first expercience working in a real exited project
           </p>
         </section>
-        <section className="mt-6 w-full h-full md:mt-10">
+        <section className="mt-6 w-full h-full md:mt-10 md:w-4/5">
           <SocialList />
         </section>
       </div>

@@ -17,7 +17,7 @@ const SocialListItem = ({
   isEmail,
 }: SocialsProps) => {
   return (
-    <li className="md:h-max md:w-28 md:flex md:items-center md:justify-center md:bg-white md:rounded-lg md:hover:bg-slate-300 md:active:bg-slate-200 transition-colors duration-300">
+    <li className="bg-[#e9eaed] md:h-max md:w-28 md:flex md:items-center md:justify-center md:rounded-lg md:hover:bg-slate-300 md:active:bg-slate-200 transition-colors duration-300">
       <Link
         className="flex items-center md:flex-col md:justify-center md:w-full md:h-28"
         target="_blank"
