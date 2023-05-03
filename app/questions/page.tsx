@@ -24,8 +24,6 @@ const Page = (): JSX.Element => {
   // Below is to change. Not nessesery to use useState for establish is it last question
   const [isLastQuestion, setIsLastQuestion] = useState<boolean>(false)
 
-  const questionsBaseLength: number = questions.length
-
   const getIndexFromLocalStorage = (): void => {
     const isSavedInLocalStorage: number = JSON.parse(
       localStorage.getItem('index') || 'false'
@@ -90,7 +88,7 @@ const Page = (): JSX.Element => {
             <QuestionSection
               index={index}
               isLastQuestion={isLastQuestion}
-              questionsBaseLength={questionsBaseLength}
+              questionsBaseLength={questions.length}
               filled={filled}
               question={questions[index].question}
             />
