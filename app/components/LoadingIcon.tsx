@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import loadingIcon from '../assets/loadingIcon.svg'
 
-const LoadingIcon = () => {
+const LoadingIcon = (): JSX.Element => {
   return (
     <>
       <Image
