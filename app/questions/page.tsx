@@ -15,34 +15,36 @@ interface QuestionsProps {
   answer: string
 }
 
-const Page = () => {
+const Page = (): JSX.Element => {
   const [questions, setQuestions] = useState<QuestionsProps[]>([])
-  const [filled, setFilled] = useState(1)
-  const [isRunning, setIsRunning] = useState(true)
-  const [index, setIndex] = useState(0)
+  const [filled, setFilled] = useState<number>(1)
+  const [isRunning, setIsRunning] = useState<boolean>(true)
+  const [index, setIndex] = useState<number>(0)
 
   // Below is to change. Not nessesery to use useState for establish is it last question
-  const [isLastQuestion, setIsLastQuestion] = useState(false)
+  const [isLastQuestion, setIsLastQuestion] = useState<boolean>(false)
 
-  const questionsBaseLength = questions.length
+  const questionsBaseLength: number = questions.length
 
-  const getIndexFromLocalStorage = () => {
-    const isSavedInLocalStorage = JSON.parse(localStorage.getItem('index'))
+  const getIndexFromLocalStorage = (): void => {
+    const isSavedInLocalStorage: number = JSON.parse(
+      localStorage.getItem('index') || 'false'
+    )
     if (isSavedInLocalStorage) {
       setIndex(isSavedInLocalStorage)
     }
   }
 
-  const saveIndexToLocalStorage = () => {
+  const saveIndexToLocalStorage = (): void => {
     localStorage.setItem('index', JSON.stringify(index + 1))
   }
 
-  const showAnswer = () => {
+  const showAnswer = (): void => {
     setIsRunning(false)
     setFilled(100)
   }
 
-  const nextQuestion = () => {
+  const nextQuestion = (): void => {
     if (index < questions.length - 1) {
       setIndex((prev) => (prev += 1))
       saveIndexToLocalStorage()
@@ -58,11 +60,13 @@ const Page = () => {
 
   useEffect(() => {
     getIndexFromLocalStorage()
-    const getQuestions = async () => {
+
+    const getQuestions = async (): Promise<void> => {
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}`)
       const data = await res.json()
       setQuestions(data)
     }
+
     getQuestions()
   }, [])
 
