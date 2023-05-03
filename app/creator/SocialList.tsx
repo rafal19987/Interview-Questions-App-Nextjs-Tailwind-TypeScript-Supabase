@@ -1,8 +1,8 @@
 import SocialListItem from './SocialListItem'
-import githubBigIcon from '../assets/githubBig.svg'
-import linkedinIcon from '../assets/linkedin.svg'
-import portfolioIcon from '../assets/portfolio.svg'
-import emailIcon from '../assets/email.svg'
+import githubBigIcon from 'assets/githubBig.svg'
+import linkedinIcon from 'assets/linkedin.svg'
+import portfolioIcon from 'assets/portfolio.svg'
+import emailIcon from 'assets/email.svg'
 
 interface SocialsProps {
   icon: string
@@ -12,9 +12,7 @@ interface SocialsProps {
   isEmail: Boolean
 }
 
-interface SocialProps extends Array<SocialsProps> {}
-
-const socials: SocialProps = [
+const socials: SocialsProps[] = [
   {
     icon: githubBigIcon,
     alt: 'github icon',
@@ -45,7 +43,7 @@ const socials: SocialProps = [
   },
 ]
 
-const SocialList = () => {
+const SocialList = (): JSX.Element => {
   return (
     <ul className="flex flex-col items-center justify-between h-56 md:h-full w-full md:flex-row lg:max-w-screen-sm">
       {socials.map((item) => (
