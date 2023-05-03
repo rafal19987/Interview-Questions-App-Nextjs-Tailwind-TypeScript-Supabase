@@ -1,4 +1,3 @@
-// components
 import TechStackList from './TechStackList'
 import LinkList from './LinkList'
 
