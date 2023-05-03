@@ -1,5 +1,5 @@
-import githubIcon from '../assets/github.svg'
-import figmaIcon from '../assets/figma.svg'
+import githubIcon from 'assets/github.svg'
+import figmaIcon from 'assets/figma.svg'
 import LinkListItem from './LinkListItem'
 
 interface LinkProps {

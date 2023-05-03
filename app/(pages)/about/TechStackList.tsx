@@ -1,8 +1,8 @@
 import TechStackListItem from './TechStackListItem'
-import tailwindIcon from '../assets/tailwind.svg'
-import reactIcon from '../assets/react.svg'
-import nextIcon from '../assets/next.svg'
-import typescriptIcon from '../assets/typescript.svg'
+import tailwindIcon from 'assets/tailwind.svg'
+import reactIcon from 'assets/react.svg'
+import nextIcon from 'assets/next.svg'
+import typescriptIcon from 'assets/typescript.svg'
 
 interface IconsProps {
   icon: string
