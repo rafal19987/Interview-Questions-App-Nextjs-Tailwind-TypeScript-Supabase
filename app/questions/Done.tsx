@@ -6,15 +6,17 @@ import Button from '../components/Button'
 
 const Done = () => {
   return (
-    <>
-      <h2>Congratss!!</h2>
-      <p>You`ve gone through all questions</p>
-      <p>I hope you will answer all of them during the interview</p>
+    <section className="flex grow flex-col items-center">
+      <h2 className="mt-5 text-2xl">Congratss!!</h2>
+      <p className="mt-5 text-xl">You`ve gone through all questions</p>
+      <p className="mt-2">
+        I hope you will answer all of them during the interview
+      </p>
 
-      <Link href="/">
+      <Link className="mt-10" href="/">
         <Button text={'Go to start page'} />
       </Link>
-    </>
+    </section>
   )
 }
 
