@@ -6,7 +6,7 @@ const Done = (): JSX.Element => {
     <section className="flex grow flex-col items-center">
       <h2 className="mt-5 text-2xl">Congratss!!</h2>
       <p className="mt-5 text-xl">You`ve gone through all questions</p>
-      <p className="mt-2">
+      <p className="mt-2 text-center">
         I hope you will answer all of them during the interview
       </p>
 
