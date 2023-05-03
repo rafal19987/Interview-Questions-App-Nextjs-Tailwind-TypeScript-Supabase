@@ -27,13 +27,13 @@ const socials: SocialsProps[] = [
     reference: 'https://www.linkedin.com/in/rafa%C5%82-izdebski-78023b1b0/',
     isEmail: false,
   },
-  {
+  /*   {
     icon: portfolioIcon,
     alt: 'portfolio site icon',
     description: 'Visit Portfolio Site',
     reference: '/',
     isEmail: false,
-  },
+  }, */
   {
     icon: emailIcon,
     alt: 'email icon',
