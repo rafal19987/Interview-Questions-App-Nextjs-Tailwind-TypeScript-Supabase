@@ -1,10 +1,7 @@
 'use client'
 
-// lib
 import { useEffect, useState } from 'react'
-
-// componenets
-import Button from '../components/Button'
+import Button from 'components/Button'
 import QuestionSection from './QuestionSection'
 import Answer from './Answer'
 import Done from './Done'
@@ -20,8 +17,6 @@ const Page = (): JSX.Element => {
   const [filled, setFilled] = useState<number>(1)
   const [isRunning, setIsRunning] = useState<boolean>(true)
   const [index, setIndex] = useState<number>(0)
-
-  // Below is to change. Not nessesery to use useState for establish is it last question
   const [isLastQuestion, setIsLastQuestion] = useState<boolean>(false)
 
   const getIndexFromLocalStorage = (): void => {

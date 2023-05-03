@@ -1,10 +1,7 @@
-// lib
 import Link from 'next/link'
+import Button from 'components/Button'
 
-// component
-import Button from '../components/Button'
-
-const Done = () => {
+const Done = (): JSX.Element => {
   return (
     <section className="flex grow flex-col items-center">
       <h2 className="mt-5 text-2xl">Congratss!!</h2>

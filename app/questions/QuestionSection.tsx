@@ -15,7 +15,7 @@ const QuestionSection = ({
   questionsBaseLength,
   question,
   filled,
-}: QuestionType) => {
+}: QuestionType): JSX.Element => {
   return (
     <section className="w-full h-40">
       <p className="w-full h-5 text-black">

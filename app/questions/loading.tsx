@@ -1,6 +1,6 @@
 import LoadingIcon from '../components/LoadingIcon'
 
-const Loading = () => {
+const Loading = (): JSX.Element => {
   return <LoadingIcon />
 }
 
