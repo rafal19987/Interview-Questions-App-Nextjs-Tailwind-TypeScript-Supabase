@@ -12,7 +12,6 @@ const Header = () => {
         <h1>JavaScript Interview Questions</h1>
       </div>
       <HamburgerMenu />
-      <DesktopNav />
     </header>
   )
 }
