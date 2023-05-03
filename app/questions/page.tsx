@@ -26,6 +26,17 @@ const Page = () => {
 
   const questionsBaseLength = questions.length
 
+  const getIndexFromLocalStorage = () => {
+    const isSavedInLocalStorage = JSON.parse(localStorage.getItem('index'))
+    if (isSavedInLocalStorage) {
+      setIndex(isSavedInLocalStorage)
+    }
+  }
+
+  const saveIndexToLocalStorage = () => {
+    localStorage.setItem('index', JSON.stringify(index + 1))
+  }
+
   const showAnswer = () => {
     setIsRunning(false)
     setFilled(100)
@@ -34,9 +45,11 @@ const Page = () => {
   const nextQuestion = () => {
     if (index < questions.length - 1) {
       setIndex((prev) => (prev += 1))
+      saveIndexToLocalStorage()
       setIsRunning(true)
       setFilled(1)
     } else {
+      localStorage.removeItem('index')
       setIsLastQuestion(true)
       setIsRunning(false)
       setFilled(100)
@@ -44,6 +57,7 @@ const Page = () => {
   }
 
   useEffect(() => {
+    getIndexFromLocalStorage()
     const getQuestions = async () => {
       const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}`)
       const data = await res.json()
