@@ -1,10 +1,7 @@
-// lib
 import Link from 'next/link'
-
-// components
 import Button from './components/Button'
 
-export default function Home() {
+export default function Home(): JSX.Element {
   return (
     <>
       <div className="flex grow flex-col items-center">

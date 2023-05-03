@@ -1,11 +1,8 @@
-// lib
 import Link from 'next/link'
 import Image from 'next/image'
+import logo from 'assets/logo.svg'
 
-// assets
-import logo from '../../../../assets/logo.svg'
-
-const Logo = () => {
+const Logo = (): JSX.Element => {
   return (
     <Link className="p-6" href="/">
       <Image src={logo} alt="Logo"></Image>

@@ -20,7 +20,7 @@ const routes: RoutesProps[] = [
   },
 ]
 
-const DesktopNav = () => {
+const DesktopNav = (): JSX.Element => {
   return (
     <div className="hidden md:flex justify-between w-3/5 h-full text-white text-xl">
       <ul className="flex w-full h-full justify-between items-center p-6">

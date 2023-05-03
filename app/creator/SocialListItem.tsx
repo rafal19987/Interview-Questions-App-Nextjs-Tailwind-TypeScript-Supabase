@@ -15,7 +15,7 @@ const SocialListItem = ({
   description,
   reference,
   isEmail,
-}: SocialsProps) => {
+}: SocialsProps): JSX.Element => {
   return (
     <li className="box-border w-56 bg-[#e9eaed] rounded-lg md:h-max md:w-28 flex items-center md:justify-center h-12 hover:bg-slate-300 active:bg-slate-200 transition-colors duration-100]">
       <Link

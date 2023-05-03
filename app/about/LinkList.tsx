@@ -1,8 +1,3 @@
-// libs
-import Link from 'next/link'
-import Image from 'next/image'
-
-// assets
 import githubIcon from '../assets/github.svg'
 import figmaIcon from '../assets/figma.svg'
 import LinkListItem from './LinkListItem'
@@ -30,7 +25,7 @@ const links: LinkProps[] = [
   },
 ]
 
-const LinkList = () => {
+const LinkList = (): JSX.Element => {
   return (
     <ul className="flex flex-col justify-between w-64 h-20">
       {links.map((link) => (
@@ -42,7 +37,6 @@ const LinkList = () => {
           reference={link.reference}
         />
       ))}
-
     </ul>
   )
 }

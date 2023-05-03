@@ -1,26 +1,39 @@
-import Image from 'next/image'
-
-// assets
+import TechStackListItem from './TechStackListItem'
 import tailwindIcon from '../assets/tailwind.svg'
 import reactIcon from '../assets/react.svg'
 import nextIcon from '../assets/next.svg'
 import typescriptIcon from '../assets/typescript.svg'
 
+interface IconsProps {
+  icon: string
+  alt: string
+}
+
+const icons: IconsProps[] = [
+  {
+    icon: tailwindIcon,
+    alt: 'tailwind icon',
+  },
+  {
+    icon: reactIcon,
+    alt: 'react icon',
+  },
+  {
+    icon: nextIcon,
+    alt: 'next icon',
+  },
+  {
+    icon: typescriptIcon,
+    alt: 'typescript icon',
+  },
+]
+
 const TechStackList = () => {
   return (
     <ul className="flex w-full flex-wrap justify-center items-center h-full p-4">
-      <li className="px-2 mt-2">
-        <Image src={tailwindIcon} alt="tailwind icon"></Image>
-      </li>
-      <li className="px-2  mt-2">
-        <Image src={reactIcon} alt="react icon"></Image>
-      </li>
-      <li className="px-2  mt-2">
-        <Image src={nextIcon} alt="next icon"></Image>
-      </li>
-      <li className="px-2  mt-2">
-        <Image src={typescriptIcon} alt="typescript icon"></Image>
-      </li>
+      {icons.map((icon) => (
+        <TechStackListItem key={icon.alt} icon={icon.icon} alt={icon.alt} />
+      ))}
     </ul>
   )
 }

@@ -1,15 +1,13 @@
 'use client'
 
-// lib
 import { useState } from 'react'
 import Link from 'next/link'
-
 import DesktopNav from '../DesktopNav/DesktopNav'
 
-const HamburgerMenu = () => {
+const HamburgerMenu = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
-  const toggleMenu = () => {
+  const toggleMenu = (): void => {
     isOpen ? setIsOpen(false) : setIsOpen(true)
   }
 
