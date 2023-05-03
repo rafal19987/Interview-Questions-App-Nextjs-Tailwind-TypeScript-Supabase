@@ -1,9 +1,7 @@
-// components
 import Logo from './Logo/Logo'
 import HamburgerMenu from './HamburgerMenu/HamburgerMenu'
-import DesktopNav from './DesktopNav/DesktopNav'
 
-const Header = () => {
+const Header = (): JSX.Element => {
   return (
     <header className="flex justify-between items-center w-full h-16 bg-[#35373b] overflow-hidden">
       <Logo />
