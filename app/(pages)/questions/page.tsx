@@ -1,75 +1,78 @@
-'use client'
+'use client';
 
-import { useEffect, useState } from 'react'
-import Button from 'components/Button'
-import QuestionSection from './QuestionSection'
-import Answer from './Answer'
-import Done from './Done'
+import { useEffect, useState } from 'react';
+import { supabase } from 'lib/supabaseClient';
+import Button from 'components/Button';
+import QuestionSection from './QuestionSection';
+import Answer from './Answer';
+import Done from './Done';
 
 interface QuestionsProps {
-  id: number
-  question: string
-  answer: string
+  id: number;
+  question: string;
+  answer: string;
 }
 
-const Page = (): JSX.Element => {
-  const [questions, setQuestions] = useState<QuestionsProps[]>([])
-  const [filled, setFilled] = useState<number>(1)
-  const [isRunning, setIsRunning] = useState<boolean>(true)
-  const [index, setIndex] = useState<number>(0)
-  const [isLastQuestion, setIsLastQuestion] = useState<boolean>(false)
+const Page = () => {
+  const [questions, setQuestions] = useState<QuestionsProps[]>([]);
+  const [filled, setFilled] = useState<number>(1);
+  const [isRunning, setIsRunning] = useState<boolean>(true);
+  const [index, setIndex] = useState<number>(0);
+  const [isLastQuestion, setIsLastQuestion] = useState<boolean>(false);
 
   const getIndexFromLocalStorage = (): void => {
     const isSavedInLocalStorage: number = JSON.parse(
       localStorage.getItem('index') || 'false'
-    )
+    );
     if (isSavedInLocalStorage) {
-      setIndex(isSavedInLocalStorage)
+      setIndex(isSavedInLocalStorage);
     }
-  }
+  };
 
   const saveIndexToLocalStorage = (): void => {
-    localStorage.setItem('index', JSON.stringify(index + 1))
-  }
+    localStorage.setItem('index', JSON.stringify(index + 1));
+  };
 
   const showAnswer = (): void => {
-    setIsRunning(false)
-    setFilled(100)
-  }
+    setIsRunning(false);
+    setFilled(100);
+  };
 
   const nextQuestion = (): void => {
     if (index < questions.length - 1) {
-      setIndex((prev) => (prev += 1))
-      saveIndexToLocalStorage()
-      setIsRunning(true)
-      setFilled(1)
+      setIndex((prev) => (prev += 1));
+      saveIndexToLocalStorage();
+      setIsRunning(true);
+      setFilled(1);
     } else {
-      localStorage.removeItem('index')
-      setIsLastQuestion(true)
-      setIsRunning(false)
-      setFilled(100)
+      localStorage.removeItem('index');
+      setIsLastQuestion(true);
+      setIsRunning(false);
+      setFilled(100);
     }
-  }
+  };
 
   useEffect(() => {
-    getIndexFromLocalStorage()
+    getIndexFromLocalStorage();
 
-    const getQuestions = async (): Promise<void> => {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}`)
-      const data = await res.json()
-      setQuestions(data)
-    }
+    const getQuestions = async () => {
+      const { data }: { data: QuestionsProps[] } = await supabase
+        .from('questions')
+        .select('*');
+      console.log(data);
+      setQuestions(data);
+    };
 
-    getQuestions()
-  }, [])
+    getQuestions();
+  }, []);
 
   useEffect(() => {
     if (filled <= 100 && isRunning) {
-      setTimeout(() => setFilled((prev) => (prev += 1)), 50)
+      setTimeout(() => setFilled((prev) => (prev += 1)), 50);
     } else {
-      setTimeout(() => setIsRunning(false), 50)
+      setTimeout(() => setIsRunning(false), 50);
     }
-  }, [filled, isRunning])
+  }, [filled, isRunning]);
 
   return (
     <div className="flex flex-col items-center w-full md:w-[400px]">
@@ -113,7 +116,7 @@ const Page = (): JSX.Element => {
         ''
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;
