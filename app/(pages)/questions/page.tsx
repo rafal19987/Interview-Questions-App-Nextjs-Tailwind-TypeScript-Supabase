@@ -55,11 +55,10 @@ const Page = () => {
   useEffect(() => {
     getIndexFromLocalStorage();
 
-    const getQuestions = async () => {
+    const getQuestions = async (): Promise<void> => {
       const { data }: { data: QuestionsProps[] } = await supabase
         .from('questions')
         .select('*');
-      console.log(data);
       setQuestions(data);
     };
 
@@ -85,12 +84,10 @@ const Page = () => {
           <>
             <QuestionSection
               index={index}
-              isLastQuestion={isLastQuestion}
               questionsBaseLength={questions.length}
               filled={filled}
               question={questions[index].question}
             />
-
             {!isRunning ? (
               /* show answer and 'next question' button */
               <>
@@ -112,9 +109,7 @@ const Page = () => {
             )}
           </>
         )
-      ) : (
-        ''
-      )}
+      ) : null}
     </div>
   );
 };
