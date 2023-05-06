@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { supabase } from 'lib/supabaseClient';
+import { PostgrestSingleResponse } from '@supabase/supabase-js';
 import Button from 'components/Button';
 import QuestionSection from './QuestionSection';
 import Answer from './Answer';
@@ -56,7 +57,7 @@ const Page = () => {
     getIndexFromLocalStorage();
 
     const getQuestions = async (): Promise<void> => {
-      const { data }: { data: QuestionsProps[] } = await supabase
+      const { data }: { data: any } = await supabase
         .from('questions')
         .select('*');
       setQuestions(data);
@@ -91,7 +92,7 @@ const Page = () => {
             {!isRunning ? (
               /* show answer and 'next question' button */
               <>
-                <section className="mt-5  h-96 bg-[#FF7900]/20 rounded-lg opacity-1 transition-all duration-300">
+                <section className="mt-5 min-h-[24rem] max-h-full bg-[#FF7900]/20 rounded-lg opacity-1 transition-all duration-300">
                   <Answer answer={questions[index].answer} />
                 </section>
                 <div className="mt-12">
@@ -101,7 +102,7 @@ const Page = () => {
             ) : (
               /* hide answer and show 'show answer' button */
               <>
-                <section className="mt-5 translate-x-96 h-96 rounded-lg opacity-0"></section>
+                <section className="mt-5 translate-x-96 min-h-[24rem] max-h-full rounded-lg opacity-0"></section>
                 <div className="mt-12">
                   <Button onClick={showAnswer} text={'show answer'} />
                 </div>
