@@ -1,6 +1,6 @@
 interface ButtonProps {
-  onClick?: () => void
-  text: string
+  onClick?: () => void;
+  text: string;
 }
 
 const Button = ({ onClick, text }: ButtonProps): JSX.Element => {
@@ -11,7 +11,7 @@ const Button = ({ onClick, text }: ButtonProps): JSX.Element => {
     >
       {text.toUpperCase()}
     </button>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

@@ -1,12 +1,12 @@
-import { Montserrat } from 'next/font/google'
-import Header from 'components/shared/Header/Header'
-import Footer from 'components/shared/Footer/Footer'
-import './globals.css'
+import { Montserrat } from 'next/font/google';
+import Header from 'components/shared/Header/Header';
+import Footer from 'components/shared/Footer/Footer';
+import './globals.css';
 
 const montserrat = Montserrat({
   weight: '400',
   subsets: ['latin'],
-})
+});
 
 export const metadata = {
   title: 'Interview Questions App',
@@ -14,12 +14,12 @@ export const metadata = {
   icons: {
     icon: '/pageFavicon.svg',
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }): JSX.Element {
   return (
     <html lang="en">
@@ -37,5 +37,5 @@ export default function RootLayout({
         </div>
       </body>
     </html>
-  )
+  );
 }
