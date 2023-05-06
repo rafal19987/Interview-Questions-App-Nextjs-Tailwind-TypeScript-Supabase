@@ -6,7 +6,7 @@ const page = () => {
     <>
       <div className="flex grow flex-col items-center w-full h-full bg-white">
         <section className="flex flex-col items-center w-4/5">
-          <h2 className="pt-6 text-3xl text-center ">
+          <h2 className="pt-6 text-3xl text-center font-bold ">
             Interview Questions App
           </h2>
           <p className="mt-6 text-lg text-left lg:w-3/5 lg:text-lg">

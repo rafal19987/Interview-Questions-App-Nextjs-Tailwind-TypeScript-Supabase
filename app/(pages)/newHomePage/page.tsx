@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { supabase } from 'lib/supabaseClient';
 import { Toaster, toast } from 'react-hot-toast';
 import Button from 'components/Button';
 import addIcon from 'assets/addIcon.svg';
@@ -14,10 +15,8 @@ const Page = () => {
   return (
     <div className="relative flex grow flex-col items-center w-full md:w-[400px] ">
       {/* PopUp */}
-
       <Toaster />
 
-      {/* Main */}
       <h2 className="w-4/5 pt-6 text-2xl text-center font-semibold md:text-3xl">
         Select pull of questions and start learning
       </h2>
