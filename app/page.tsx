@@ -8,7 +8,9 @@ import Button from 'components/Button';
 import addIcon from 'assets/addIcon.svg';
 
 const popup = (): void => {
-  toast.error('This future is not available yet. App is still progress..');
+  toast.error(
+    'This feature is not available yet. The application is still being developed.'
+  );
 };
 
 const Page = () => {

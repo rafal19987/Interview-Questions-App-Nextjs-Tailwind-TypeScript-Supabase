@@ -10,12 +10,13 @@ const page = () => {
             Interview Questions App
           </h2>
           <p className="mt-6 text-sm text-left lg:w-3/5 lg:text-lg">
-            Job interviews can be very stressful. That is why it is so important
-            to prepare well for them. This app was created to help you learn.
-            The questions and answers you will see here may be useful in job
-            interviews for Juniors and Mids. Repeating them successively may not
-            guarantee success, but it will certainly make you feel a bit more
-            confident before the key meeting with the technical person.
+            Job interviews can be highly stressful, which is why it is crucial
+            to adequately prepare for them. This application was developed to
+            assist you in your learning process. The questions and answers
+            provided here can be beneficial for junior and mid-level job
+            interviews. Repeatedly reviewing them may not guarantee success, but
+            it will undoubtedly boost your confidence prior to the crucial
+            meeting with the technical interviewer.
           </p>
         </section>
         <section className="flex items-center flex-col w-4/5 mt-8">
