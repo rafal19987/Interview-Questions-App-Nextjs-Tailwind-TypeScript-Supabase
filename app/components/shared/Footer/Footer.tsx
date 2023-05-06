@@ -1,9 +1,9 @@
 const Footer = (): JSX.Element => {
   return (
-    <footer className="flex items-center justify-center w-full h-8 bg-[#35373b] text-white text-s text-center">
+    <footer className="flex items-center justify-center w-full h-8 text-[#ACA4B2] text-sm text-center">
       Copyright © all rights reserved
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

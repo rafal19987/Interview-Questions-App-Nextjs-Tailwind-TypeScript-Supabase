@@ -1,12 +1,12 @@
-import Link from 'next/link'
-import Image from 'next/image'
+import Link from 'next/link';
+import Image from 'next/image';
 
 interface SocialsProps {
-  icon: string
-  alt: string
-  description: string
-  reference: string
-  isEmail?: Boolean
+  icon: string;
+  alt: string;
+  description: string;
+  reference: string;
+  isEmail?: Boolean;
 }
 
 const SocialListItem = ({
@@ -17,9 +17,9 @@ const SocialListItem = ({
   isEmail,
 }: SocialsProps): JSX.Element => {
   return (
-    <li className="box-border w-56 bg-[#e9eaed] rounded-lg md:h-max md:w-28 flex items-center md:justify-center h-12 hover:bg-slate-300 active:bg-slate-200 transition-colors duration-100]">
+    <li className="box-border w-56 rounded-lg md:h-max md:w-28 flex items-center md:justify-center h-12 hover:bg-slate-300 active:bg-slate-200 transition-colors duration-100]">
       <Link
-        className="flex items-center w-full h-12 px-2 rounded-lg focus:border-[#ff7900] focus:outline-none focus:border-2 md:flex-col md:justify-center md:w-full md:h-28"
+        className="flex items-center w-full h-12 px-2 rounded-lg bg-[#232323]  focus:border-[#666666] focus:outline-none focus:border-2 hover:bg-[#353535] md:flex-col md:justify-center md:w-full md:h-28"
         target="_blank"
         href={isEmail ? `mailto:${reference}` : `${reference}`}
       >
@@ -29,7 +29,7 @@ const SocialListItem = ({
         </span>
       </Link>
     </li>
-  )
-}
+  );
+};
 
-export default SocialListItem
+export default SocialListItem;

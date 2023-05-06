@@ -1,15 +1,15 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
-import Link from 'next/link'
-import DesktopNav from '../DesktopNav/DesktopNav'
+import { useState } from 'react';
+import Link from 'next/link';
+import DesktopNav from '../DesktopNav/DesktopNav';
 
 const HamburgerMenu = (): JSX.Element => {
-  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggleMenu = (): void => {
-    isOpen ? setIsOpen(false) : setIsOpen(true)
-  }
+    isOpen ? setIsOpen(false) : setIsOpen(true);
+  };
 
   return (
     <>
@@ -36,20 +36,32 @@ const HamburgerMenu = (): JSX.Element => {
       {isOpen ? (
         // nav is open
         // nav height is [100vh - (headerHeight)]
-        <nav className="absolute flex justify-center  top-16 right-auto w-screen h-[calc(100vh-4rem)] bg-[#4a4b4f] text-3xl text-white z-10 duration-300 md:hidden">
+        <nav className="absolute flex justify-center  top-16 right-auto w-screen h-[calc(100vh-4rem)] bg-[#1C1C1C] text-2xl text-[#ACA4B2] z-10 duration-300 md:hidden">
           <ul className="flex flex-col justify-evenly items-center  w-full h-full ">
-            <li className="">
-              <Link href="/" onClick={toggleMenu}>
+            <li>
+              <Link
+                className="hover:text-[#8b8b8b]"
+                href="/"
+                onClick={toggleMenu}
+              >
                 Home
               </Link>
             </li>
-            <li className="">
-              <Link href="/about" onClick={toggleMenu}>
+            <li>
+              <Link
+                className="hover:text-[#8b8b8b]"
+                href="/about"
+                onClick={toggleMenu}
+              >
                 About
               </Link>
             </li>
-            <li className="">
-              <Link href="/creator" onClick={toggleMenu}>
+            <li>
+              <Link
+                className="hover:text-[#8b8b8b]"
+                href="/creator"
+                onClick={toggleMenu}
+              >
                 Creator
               </Link>
             </li>
@@ -58,7 +70,7 @@ const HamburgerMenu = (): JSX.Element => {
       ) : (
         // nav is closed
         // nav height is [100vh - (headerHeight)]
-        <nav className="absolute flex justify-center  top-16 right-0 w-screen h-[calc(100vh-4rem)] bg-[#4a4b4f] text-3xl text-white z-10 translate-x-full duration-300 ">
+        <nav className="absolute flex justify-center  top-16 right-0 w-screen h-[calc(100vh-4rem)] bg-[#1C1C1C] text-2xl text-[#ACA4B2] z-10 translate-x-full duration-300 ">
           <ul className="flex flex-col justify-evenly items-center  w-full h-full">
             <li>
               <Link href="/">Home</Link>
@@ -74,7 +86,7 @@ const HamburgerMenu = (): JSX.Element => {
       )}
       <DesktopNav />
     </>
-  )
-}
+  );
+};
 
-export default HamburgerMenu
+export default HamburgerMenu;
