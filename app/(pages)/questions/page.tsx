@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import { supabase } from 'lib/supabaseClient';
-import { PostgrestSingleResponse } from '@supabase/supabase-js';
 import Button from 'components/Button';
 import QuestionSection from './QuestionSection';
 import Answer from './Answer';
