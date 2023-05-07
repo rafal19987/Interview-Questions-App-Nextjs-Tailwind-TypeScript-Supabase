@@ -1,5 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import NotReadyPortfolioLink from './NotReadyPortfolioLink';
 
 interface SocialsProps {
   icon: string;
@@ -16,10 +19,15 @@ const SocialListItem = ({
   reference,
   isEmail,
 }: SocialsProps): JSX.Element => {
+  if (alt === 'portfolio site icon')
+    return (
+      <NotReadyPortfolioLink icon={icon} description={description} alt={alt} />
+    );
+
   return (
-    <li className="box-border w-56 rounded-lg md:h-max md:w-28 flex items-center md:justify-center h-12 hover:bg-slate-300 active:bg-slate-200 transition-colors duration-100]">
+    <li className="box-border w-56 rounded-lg md:h-max md:w-28 flex items-center md:justify-center h-12">
       <Link
-        className="flex items-center w-full h-12 px-2 rounded-lg bg-[#232323]  focus:border-[#666666] focus:outline-none focus:border-2 hover:bg-[#353535] md:flex-col md:justify-center md:w-full md:h-28"
+        className="flex items-center w-full h-12 px-2 rounded-lg bg-[var(--link-primary-bg)]  focus:border-[var(--link-focus-border)] focus:outline-none focus:border-2 hover:bg-[var(--link-hover-bg)] md:flex-col md:justify-center md:w-full md:h-28"
         target="_blank"
         href={isEmail ? `mailto:${reference}` : `${reference}`}
       >
