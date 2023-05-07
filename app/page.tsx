@@ -19,7 +19,7 @@ const Page = () => {
       {/* PopUp */}
       <Toaster />
 
-      <h2 className="w-4/5 pt-6 text-lg text-center font-bold md:text-3xl">
+      <h2 className="w-4/5 pt-6 text-lg text-center font-bold">
         Select pull of questions and start learning
       </h2>
 
