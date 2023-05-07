@@ -3,6 +3,7 @@ import tailwindIcon from 'assets/tailwind.svg';
 import reactIcon from 'assets/react.svg';
 import nextIcon from 'assets/next.svg';
 import typescriptIcon from 'assets/typescript.svg';
+import supabaseIcon from 'assets/supabase.svg';
 
 interface IconsProps {
   icon: string;
@@ -25,6 +26,10 @@ const icons: IconsProps[] = [
   {
     icon: typescriptIcon,
     alt: 'typescript icon',
+  },
+  {
+    icon: supabaseIcon,
+    alt: 'supabase icon',
   },
 ];
 
