@@ -1,12 +1,12 @@
-import githubIcon from 'assets/github.svg'
-import figmaIcon from 'assets/figma.svg'
-import LinkListItem from './LinkListItem'
+import githubIcon from 'assets/github.svg';
+import figmaIcon from 'assets/figma.svg';
+import LinkListItem from './LinkListItem';
 
 interface LinkProps {
-  icon: string
-  alt: string
-  description: string
-  reference: string
+  icon: string;
+  alt: string;
+  description: string;
+  reference: string;
 }
 
 const links: LinkProps[] = [
@@ -23,11 +23,11 @@ const links: LinkProps[] = [
     reference:
       'https://www.figma.com/proto/8QvtrBsjZqSzMUszJSo9qD/Interview-Questions?node-id=1-3&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A3',
   },
-]
+];
 
 const LinkList = (): JSX.Element => {
   return (
-    <ul className="flex flex-col justify-between w-64 h-20">
+    <ul className="flex flex-col justify-between w-64 h-20 xl:mt-4">
       {links.map((link) => (
         <LinkListItem
           key={link.alt}
@@ -38,7 +38,7 @@ const LinkList = (): JSX.Element => {
         />
       ))}
     </ul>
-  )
-}
+  );
+};
 
-export default LinkList
+export default LinkList;
