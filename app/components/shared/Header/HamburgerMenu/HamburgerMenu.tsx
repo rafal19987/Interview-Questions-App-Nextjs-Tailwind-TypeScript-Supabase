@@ -14,15 +14,15 @@ const HamburgerMenu = (): JSX.Element => {
   return (
     <>
       <button
-        className="relative flex flex-col justify-evenly items-center w-16 h-8 mr-6  md:hidden"
+        className="relative flex flex-col justify-evenly items-center w-16 h-9 mr-6 bg-[#232323] rounded-lg md:hidden"
         onClick={toggleMenu}
       >
         {isOpen ? (
           // menu is open
           <>
-            <div className="translate-y-2 rotate-45 w-3/5 h-1 bg-white rounded-sm transition-all duration-300"></div>
+            <div className="translate-y-2.5 rotate-45 w-3/5 h-1 bg-white rounded-sm transition-all duration-300"></div>
             <div className="w-3/5 h-1 bg-white rounded-sm transition-all opacity-0 duration-100"></div>
-            <div className="-translate-y-2 -rotate-45 w-3/5 h-1 bg-white rounded-sm transition-all duration-300"></div>
+            <div className="-translate-y-2.5 -rotate-45 w-3/5 h-1 bg-white rounded-sm transition-all duration-300"></div>
           </>
         ) : (
           // menu is closed
@@ -40,7 +40,7 @@ const HamburgerMenu = (): JSX.Element => {
           <ul className="flex flex-col justify-evenly items-center  w-full h-full ">
             <li>
               <Link
-                className="hover:text-[#8b8b8b]"
+                className="border-b hover:text-[#8b8b8b] hover:border-[#8b8b8b]"
                 href="/"
                 onClick={toggleMenu}
               >
@@ -49,7 +49,7 @@ const HamburgerMenu = (): JSX.Element => {
             </li>
             <li>
               <Link
-                className="hover:text-[#8b8b8b]"
+                className="border-b hover:text-[#8b8b8b] hover:border-[#8b8b8b]"
                 href="/about"
                 onClick={toggleMenu}
               >
@@ -58,7 +58,7 @@ const HamburgerMenu = (): JSX.Element => {
             </li>
             <li>
               <Link
-                className="hover:text-[#8b8b8b]"
+                className="border-b hover:text-[#8b8b8b] hover:border-[#8b8b8b]"
                 href="/creator"
                 onClick={toggleMenu}
               >
@@ -71,15 +71,33 @@ const HamburgerMenu = (): JSX.Element => {
         // nav is closed
         // nav height is [100vh - (headerHeight)]
         <nav className="absolute flex justify-center  top-16 right-0 w-screen h-[calc(100vh-4rem)] bg-[#1C1C1C] text-2xl text-[#ACA4B2] z-10 translate-x-full duration-300 ">
-          <ul className="flex flex-col justify-evenly items-center  w-full h-full">
+          <ul className="flex flex-col justify-evenly items-center  w-full h-full ">
             <li>
-              <Link href="/">Home</Link>
+              <Link
+                className="border-b hover:text-[#8b8b8b] hover:border-[#8b8b8b]"
+                href="/"
+                onClick={toggleMenu}
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <Link href="/about">About</Link>
+              <Link
+                className="border-b hover:text-[#8b8b8b] hover:border-[#8b8b8b]"
+                href="/about"
+                onClick={toggleMenu}
+              >
+                About
+              </Link>
             </li>
             <li>
-              <Link href="/creator">Creator</Link>
+              <Link
+                className="border-b hover:text-[#8b8b8b] hover:border-[#8b8b8b]"
+                href="/creator"
+                onClick={toggleMenu}
+              >
+                Creator
+              </Link>
             </li>
           </ul>
         </nav>
