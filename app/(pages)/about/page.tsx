@@ -33,7 +33,7 @@ const page = () => {
         <section className="flex items-center flex-col w-4/5 mt-10 md:mt-14">
           <LinkList />
         </section>
-        <section className="flex flex-col w-4/5 mt-10 md:mt-14 md:items-center">
+        <section className="flex flex-col w-full mt-10 md:mt-14 md:items-center">
           <h2 className="text-lg text-center font-bold md:text-xl">
             Project Tech Stack
           </h2>
