@@ -6,7 +6,7 @@ const page = () => {
     <>
       <div className="flex grow flex-col items-center w-full h-full">
         <section className="flex flex-col items-center w-4/5">
-          <h2 className="pt-6 text-lg text-center font-bold md:pt-8 md:text-2xl">
+          <h2 className="pt-6 text-lg text-center font-bold md:pt-8 md:text-2xl xl:pt-14">
             Interview Questions App
           </h2>
           <p className="mt-8 text-sm text-left md:w-3/5 md:text-base lg:mt-12">
@@ -33,8 +33,10 @@ const page = () => {
         <section className="flex items-center flex-col w-4/5 mt-10 md:mt-14">
           <LinkList />
         </section>
-        <section className="flex flex-col w-4/5 mt-10 md:mt-14">
-          <h2 className="text-lg  text-center font-bold">Project Tech Stack</h2>
+        <section className="flex flex-col w-4/5 mt-10 md:mt-14 md:items-center">
+          <h2 className="text-lg text-center font-bold md:text-xl">
+            Project Tech Stack
+          </h2>
           <TechStackList />
         </section>
       </div>
