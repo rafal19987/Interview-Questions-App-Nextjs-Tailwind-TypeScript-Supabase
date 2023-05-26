@@ -1,24 +1,5 @@
 import Link from 'next/link';
-
-interface RoutesProps {
-  route: string;
-  description: string;
-}
-
-const routes: RoutesProps[] = [
-  {
-    route: '/',
-    description: 'home',
-  },
-  {
-    route: '/about',
-    description: 'about',
-  },
-  {
-    route: '/creator',
-    description: 'creator',
-  },
-];
+import { routes } from '@/routes/routes';
 
 const DesktopNav = () => {
   return (
