@@ -1,7 +1,7 @@
-import Image from 'next/image'
-import loadingIcon from '../assets/loadingIcon.svg'
+import Image from 'next/image';
+import loadingIcon from '../assets/loadingIcon.svg';
 
-const LoadingIcon = (): JSX.Element => {
+const LoadingIcon = () => {
   return (
     <>
       <Image
@@ -12,7 +12,7 @@ const LoadingIcon = (): JSX.Element => {
         alt="Loading..."
       ></Image>
     </>
-  )
-}
+  );
+};
 
-export default LoadingIcon
+export default LoadingIcon;

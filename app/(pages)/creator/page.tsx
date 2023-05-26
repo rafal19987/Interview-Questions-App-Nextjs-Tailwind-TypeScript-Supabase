@@ -1,6 +1,6 @@
 import SocialList from './SocialList';
 
-const page = (): JSX.Element => {
+const page = () => {
   return (
     <>
       <div className="flex grow flex-col items-center w-full h-full">
