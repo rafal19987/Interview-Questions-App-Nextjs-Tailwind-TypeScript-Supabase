@@ -1,15 +1,9 @@
 import githubIcon from 'assets/github.svg';
 import figmaIcon from 'assets/figma.svg';
 import LinkListItem from './LinkListItem';
+import { LinkTypes } from '@/types/linkTypes';
 
-interface LinkProps {
-  icon: string;
-  alt: string;
-  description: string;
-  reference: string;
-}
-
-const links: LinkProps[] = [
+const links: LinkTypes[] = [
   {
     icon: githubIcon,
     alt: 'github icon',
@@ -25,7 +19,7 @@ const links: LinkProps[] = [
   },
 ];
 
-const LinkList = (): JSX.Element => {
+const LinkList = () => {
   return (
     <ul className="flex flex-col justify-between w-64 h-20 xl:mt-4">
       {links.map((link) => (
