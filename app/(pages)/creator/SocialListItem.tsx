@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import NotReadyPortfolioLink from './NotReadyPortfolioLink';
 
 interface SocialsProps {
   icon: string;
@@ -19,11 +18,6 @@ const SocialListItem = ({
   reference,
   isEmail,
 }: SocialsProps): JSX.Element => {
-  if (alt === 'portfolio site icon')
-    return (
-      <NotReadyPortfolioLink icon={icon} description={description} alt={alt} />
-    );
-
   return (
     <li className="box-border w-56 rounded-lg md:h-max md:w-28 flex items-center md:justify-center h-12">
       <Link

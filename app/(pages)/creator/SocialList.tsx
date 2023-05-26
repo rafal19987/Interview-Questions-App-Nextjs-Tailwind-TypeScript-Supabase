@@ -38,7 +38,7 @@ const socials: SocialsProps[] = [
     icon: portfolioIcon,
     alt: 'portfolio site icon',
     description: 'Visit Portfolio Site',
-    reference: '/',
+    reference: 'https://www.rafalizdebski.pl/',
     isEmail: false,
   },
   {
