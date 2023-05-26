@@ -1,15 +1,6 @@
-'use client';
-
 import Link from 'next/link';
 import Image from 'next/image';
-
-interface SocialsProps {
-  icon: string;
-  alt: string;
-  description: string;
-  reference: string;
-  isEmail?: Boolean;
-}
+import { SocialLinkTypes } from '@/types/socialLinkTypes';
 
 const SocialListItem = ({
   icon,
@@ -17,7 +8,7 @@ const SocialListItem = ({
   description,
   reference,
   isEmail,
-}: SocialsProps): JSX.Element => {
+}: SocialLinkTypes) => {
   return (
     <li className="box-border w-56 rounded-lg md:h-max md:w-28 flex items-center md:justify-center h-12">
       <Link
