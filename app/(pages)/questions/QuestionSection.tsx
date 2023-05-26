@@ -1,4 +1,3 @@
-// components
 import ProgressBar from './ProgressBar';
 
 interface QuestionType {
@@ -13,7 +12,7 @@ const QuestionSection = ({
   questionsBaseLength,
   question,
   filled,
-}: QuestionType): JSX.Element => {
+}: QuestionType) => {
   return (
     <section className="w-full min-h-[10rem] max-h-full">
       <p className="w-full h-5 text-sm text-[#ACA4B2]">

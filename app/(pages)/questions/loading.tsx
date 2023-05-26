@@ -1,7 +1,7 @@
-import LoadingIcon from 'components/LoadingIcon'
+import LoadingIcon from 'components/LoadingIcon';
 
-const Loading = (): JSX.Element => {
-  return <LoadingIcon />
-}
+const Loading = () => {
+  return <LoadingIcon />;
+};
 
-export default Loading
+export default Loading;
