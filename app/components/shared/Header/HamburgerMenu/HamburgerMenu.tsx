@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import DesktopNav from '../DesktopNav/DesktopNav';
 
-const HamburgerMenu = (): JSX.Element => {
+const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggleMenu = (): void => {

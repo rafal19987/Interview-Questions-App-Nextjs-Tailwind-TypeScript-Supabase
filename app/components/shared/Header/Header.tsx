@@ -1,7 +1,7 @@
 import Logo from './Logo/Logo';
 import HamburgerMenu from './HamburgerMenu/HamburgerMenu';
 
-const Header = (): JSX.Element => {
+const Header = () => {
   return (
     <header className="flex justify-between items-center w-full h-16 overflow-hidden border-b border-[#232323] lg:border lg:border-t-0">
       <Logo />

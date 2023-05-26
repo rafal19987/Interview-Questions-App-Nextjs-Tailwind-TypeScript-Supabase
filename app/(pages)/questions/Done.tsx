@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Button from 'components/Button';
 
-const Done = (): JSX.Element => {
+const Done = () => {
   return (
     <section className="flex grow flex-col items-center text-center">
       <h2 className="mt-5 text-lg font-bold">Congratss!!</h2>

@@ -1,14 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { LinkTypes } from '@/types/linkTypes';
 
-interface LinkProps {
-  icon: string;
-  alt: string;
-  description: string;
-  reference: string;
-}
-
-const LinkListItem = ({ icon, alt, description, reference }: LinkProps) => {
+const LinkListItem = ({ icon, alt, description, reference }: LinkTypes) => {
   return (
     <li>
       <Link
