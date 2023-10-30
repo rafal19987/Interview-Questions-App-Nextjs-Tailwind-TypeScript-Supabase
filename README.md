@@ -6,7 +6,7 @@
 
 - JavaScript Interview Questions APP is my first application created using TypeScript, Tailwind, React, Next.js. The main idea of the application is to help you prepare for javascript interviews. The database of questions will be constantly expanded.
 
-! Work is underway on the mobile version in react-native !
+! Work is underway on the mobile version in react-native ! <br />
 ![image](https://github.com/rafal19987/Interview-Questions-App/assets/6312438/6b3ee285-121c-4beb-9242-8ebd26368bc6)
 
 
