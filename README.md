@@ -6,9 +6,9 @@
 
 - JavaScript Interview Questions APP is my first application created using TypeScript, Tailwind, React, Next.js. The main idea of the application is to help you prepare for javascript interviews. The database of questions will be constantly expanded.
 
-- The application is currently in the implementation phase and not all functionalities have been implemented. You can check the original stylistic idea of the application through the shared prototype in Figma, which was prepared by me.
+! Work is underway on the mobile version in react-native !
+![image](https://github.com/rafal19987/Interview-Questions-App/assets/6312438/6b3ee285-121c-4beb-9242-8ebd26368bc6)
 
-- https://www.figma.com/proto/8QvtrBsjZqSzMUszJSo9qD/Interview-Questions?node-id=0-1
 
 # Getting Started
 
@@ -33,6 +33,7 @@ npm i
 Then, you can run the development server:
 
 ```bash
+
 npm run dev
 ```
 
