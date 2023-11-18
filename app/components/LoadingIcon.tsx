@@ -5,11 +5,11 @@ const LoadingIcon = () => {
   return (
     <>
       <Image
-        className=" mt-32 animate-spin"
+        className=' mt-32 animate-spin'
         src={loadingIcon}
         width={40}
         height={40}
-        alt="Loading..."
+        alt='Loading...'
       ></Image>
     </>
   );

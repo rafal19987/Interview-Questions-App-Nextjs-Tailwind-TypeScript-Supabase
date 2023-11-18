@@ -9,7 +9,6 @@
 ! Work is underway on the mobile version in react-native ! <br />
 ![image](https://github.com/rafal19987/Interview-Questions-App/assets/6312438/6b3ee285-121c-4beb-9242-8ebd26368bc6)
 
-
 # Getting Started
 
 First, clone the repo on your computer

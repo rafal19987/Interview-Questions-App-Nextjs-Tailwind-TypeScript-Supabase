@@ -21,7 +21,7 @@ const links: LinkTypes[] = [
 
 const LinkList = () => {
   return (
-    <ul className="flex flex-col justify-between w-64 h-20 xl:mt-4">
+    <ul className='flex flex-col justify-between w-64 h-20 xl:mt-4'>
       {links.map((link) => (
         <LinkListItem
           key={link.alt}

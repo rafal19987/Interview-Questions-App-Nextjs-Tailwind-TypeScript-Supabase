@@ -4,8 +4,8 @@ import logo from 'assets/logo.svg';
 
 const Logo = () => {
   return (
-    <Link className="p-6" href="/">
-      <Image src={logo} alt="Logo"></Image>
+    <Link className='p-6' href='/'>
+      <Image src={logo} alt='Logo'></Image>
     </Link>
   );
 };
