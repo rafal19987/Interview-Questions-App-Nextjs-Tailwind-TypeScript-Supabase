@@ -22,7 +22,7 @@ const Page = () => {
 
   const getIndexFromLocalStorage = (): void => {
     const isSavedInLocalStorage: number = JSON.parse(
-      localStorage.getItem('index') || 'false'
+      localStorage.getItem('index') || 'false',
     );
     if (isSavedInLocalStorage) {
       setIndex(isSavedInLocalStorage);
@@ -74,7 +74,7 @@ const Page = () => {
   }, [filled, isRunning]);
 
   return (
-    <div className="flex flex-col items-center w-full md:w-[400px]">
+    <div className='flex flex-col items-center w-full md:w-[400px]'>
       {questions.length ? (
         isLastQuestion ? (
           <>
@@ -91,18 +91,18 @@ const Page = () => {
             {!isRunning ? (
               /* show answer and 'next question' button */
               <>
-                <section className="mt-5 min-h-[20rem] max-h-full bg-[#232323] rounded-lg text-sm opacity-1 transition-all duration-300">
+                <section className='mt-5 min-h-[20rem] max-h-full bg-[#232323] rounded-lg text-sm opacity-1 transition-all duration-300'>
                   <Answer answer={questions[index].answer} />
                 </section>
-                <div className="mt-12">
+                <div className='mt-12'>
                   <Button onClick={nextQuestion} text={'next question'} />
                 </div>
               </>
             ) : (
               /* hide answer and show 'show answer' button */
               <>
-                <section className="mt-5 translate-x-96 min-h-[20rem] max-h-full rounded-lg opacity-0"></section>
-                <div className="mt-12">
+                <section className='mt-5 translate-x-96 min-h-[20rem] max-h-full rounded-lg opacity-0'></section>
+                <div className='mt-12'>
                   <Button onClick={showAnswer} text={'show answer'} />
                 </div>
               </>
